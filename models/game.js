@@ -5,7 +5,7 @@ const gameSchema = new Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
   genre: String,
-  date: { type: Date, default: Date.now }
+  date: { type: Date}
 });
 
 const Game = mongoose.model("Game", gameSchema);

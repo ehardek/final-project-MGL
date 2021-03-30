@@ -3,12 +3,6 @@ import "./Box.css";
 import {Card} from "react-bootstrap";
 
 const MyGameLibrary = () => {
-const Games = [
-  {Image: "", title:"", text: ""},
-  {Image: "", title:"", text: ""},
-  {Image: "", title:"", text: ""},
-  {Image: "", title:"", text: ""},
-];
 
 const renderCard = (car,index) =>{
   return(

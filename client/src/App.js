@@ -6,13 +6,14 @@ import NewUser from "./pages/NewUser";
 import Search from "./pages/Search";
 import Library from "./pages/Library";
 
+
 function App() {
   return (
     <Router>
       <div>
         <Nav/>
         <Switch>
-          <Route exact path = "/login" component = {Login}/>
+          <Route exact path = "/" component = {Login}/>
           <Route exact path = "/newuser" component = {NewUser}/>
           <Route exact path = "/search" component = {Search}/>
           <Route exact path = "/library" component ={Library}/>

@@ -6,3 +6,11 @@ mongoose.connect(
     "mongodb://localhost/mygamelibrary"
   );
 
+const userSeed = [
+  {
+
+  },
+  {
+
+  },
+]

@@ -1,10 +1,12 @@
 import React from "react";
 import {Button, Jumbotron, Container, InputGroup, FormControl } from "react-bootstrap";
+import {searchGames} from '../utils/API';
+
 
 function Search() {
-    // function submitSearch(event) {
-    //  event.preventDefault()   
-    // }
+    function submitSearch(event) {
+     event.preventDefault()   
+    }
     return(
         <>
         <Jumbotron fluid className = "text-light bg-dark">

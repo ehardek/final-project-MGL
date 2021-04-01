@@ -1,8 +1,8 @@
 import React from "react";
-import {Card} from "react-bootstrap";
-import { Body } from "react-bootstrap/lib/Media";
+import {Card } from "react-bootstrap";
 
-const MyGameLibrary = () => {
+
+const gameLibrary = () => {
 const gamesList = [
   {image: "https://media.rawg.io/media/games/aeb/aeb33772a46dfe88fa9bd2f93068c91c.jpg", title:"BattleField: Bad Company", text: ""},
   {image: "", title:"", text: ""},
@@ -28,7 +28,6 @@ return (<div classname = "App">
 </div>
 )
 };
-export default MyGameLibrary
 var styles = `
     .qwebirc-qui .ircwindow div { 
         font-family: Georgia,Cambria,"Times New Roman",Times,serif;
@@ -43,4 +42,5 @@ var styleSheet = document.createElement("style")
 styleSheet.type = "text/css"
 styleSheet.innerText = styles
 document.head.appendChild(styleSheet)
-export default MyGameLibrary
+
+export default gameLibrary

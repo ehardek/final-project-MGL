@@ -1,6 +1,6 @@
 import React from "react";
-// import "./Box.css";
 import {Card} from "react-bootstrap";
+import { Body } from "react-bootstrap/lib/Media";
 
 const MyGameLibrary = () => {
 const gamesList = [
@@ -28,7 +28,19 @@ return (<div classname = "App">
 </div>
 )
 };
-
-   
 export default MyGameLibrary
+var styles = `
+    .qwebirc-qui .ircwindow div { 
+        font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+        margin: 26px auto 0 auto;
+        max-width: 650px;
+    }
+    .qwebirc-qui .lines {
 
+`
+
+var styleSheet = document.createElement("style")
+styleSheet.type = "text/css"
+styleSheet.innerText = styles
+document.head.appendChild(styleSheet)
+export default MyGameLibrary

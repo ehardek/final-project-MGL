@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import NewUser from "./pages/NewUser";
 import Search from "./pages/Search";
 import Library from "./pages/Library";
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route exact path = "/search" component = {Search}/>
           <Route exact path = "/library" component ={Library}/>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

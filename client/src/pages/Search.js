@@ -18,7 +18,7 @@ function Search() {
       aria-describedby="basic-addon2"
     />  
     <InputGroup.Append>
-      <Button type="Submit" variant="outline-light">Button</Button>
+      <Button type="Submit" variant="outline-light">Search</Button>
     </InputGroup.Append>
   </InputGroup>
 </Container>

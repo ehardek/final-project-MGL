@@ -1,10 +1,14 @@
 import React, {useState} from "react";
-import {Button, Jumbotron, Container, InputGroup, FormControl } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import {Jumbotron, Container, InputGroup, FormControl} from "react-bootstrap";
 import {searchGames} from '../utils/API';
+import resultList from "../components/List";
 
 
 function Search() {
-   const [search , setSearch] = useState()
+   const [search , setSearch] = useState("Rawg.io")
+   const [name, gameName] = useState("")
+   
     function submitSearch(event) {
       console.log(search)
         searchGames(search).then(
@@ -27,6 +31,9 @@ return(
     </InputGroup.Append>
   </InputGroup>
  </Container>
+ {/* <Container>
+<resultList title="hello" url="world"/>
+ </Container> */}
 </Jumbotron>
 </>
     )

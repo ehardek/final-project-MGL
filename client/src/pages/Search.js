@@ -1,18 +1,18 @@
 import React, {useState} from "react";
 import Button from "react-bootstrap/Button";
-import {Jumbotron, Container, InputGroup, FormControl, Row, Col} from "react-bootstrap";
+import {Jumbotron, Container, InputGroup, FormControl, Row} from "react-bootstrap";
 import {searchGames} from '../utils/API';
-import ResultList from "../components/List";
-import GameCard from "../components/GameCard"
+// import ResultList from "../components/List";
+import GameCard from "../components/GameCard/style"
 
 
 function Search() {
-   const [search , setSearch] = useState("Rawg.io")
-   const [name, gameName] = useState("")
-   const [list, setList] = useState([])
-    // this.state = {
-    //   resultsList: []
-    // }
+   const [search , setSearch] = useState("Rawg.io");
+  //  const [name, gameName] = useState("");
+   const [list, setList] = useState([]);
+   const [lib, gameLib] = useState([]);
+   
+   
    function submitSearch(event) {
       console.log(search)
         searchGames(search).then(

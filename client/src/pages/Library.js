@@ -1,6 +1,6 @@
 import React from "react";
 import {Card} from "react-bootstrap";
-
+import style from './styles';
 
 const gameLibrary = () => {
 const gamesList = [
@@ -12,8 +12,10 @@ const gamesList = [
 
 const renderCard = (card,index) =>{
   return(
+    <Style>
     <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={card.image} />
+      
+  <Card.Img variant="top" src={card.image}  />
   <Card.Body>
   <Card.Title>{card.title}</Card.Title>
     <Card.Text>
@@ -21,6 +23,7 @@ const renderCard = (card,index) =>{
     </Card.Text>
   </Card.Body>
 </Card>
+</Style>
 );
 };
 return (<div classname = "App">
@@ -28,19 +31,6 @@ return (<div classname = "App">
 </div>
 )
 };
-var styles = `
-    .qwebirc-qui .ircwindow div { 
-        font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-        margin: 26px auto 0 auto;
-        max-width: 650px;
-    }
-    .qwebirc-qui .lines {
 
-`
-
-var styleSheet = document.createElement("style")
-styleSheet.type = "text/css"
-styleSheet.innerText = styles
-document.head.appendChild(styleSheet)
 
 export default gameLibrary

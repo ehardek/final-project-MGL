@@ -7,12 +7,16 @@ function NewUser() {
     }
     return(
         <>
-         <Jumbotron fluid className = "text-light bg-dark">
+        
+         <Jumbotron fluid className = "text-light bg-dark " >
             <Container>
+                
             <Form onSubmit={createNewUser}>
+        
+                
                  <Form.Group>
                     <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email"/>
+                    <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Password</Form.Label>

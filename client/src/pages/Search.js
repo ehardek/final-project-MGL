@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import Button from "react-bootstrap/Button";
-import {Jumbotron, Container, InputGroup, FormControl} from "react-bootstrap";
+import {Jumbotron, Container, InputGroup, FormControl, Row, Col} from "react-bootstrap";
 import {searchGames} from '../utils/API';
 import ResultList from "../components/List";
+import GameCard from "../components/GameCard"
 
 
 function Search() {
@@ -39,7 +40,19 @@ return(
   </InputGroup>
  </Container>
  <Container>
-<ResultList name="hello" url="world"/>
+{/* <ResultList name="hello" url="world"/> */}
+<Row>
+  {list.length ? (
+   list.map(game=>(
+     <GameCard
+      name = {game.name}
+      background_image = {game.background_image}
+      id = {game.id}
+    />
+   ))):(
+     <h3> What the Heck is that?</h3>
+   ) } 
+</Row>
  </Container>
 </Jumbotron>
 </>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function resultList(props) {
+function ResultList(props) {
   return (
     <ul className="list-group result-list">
       <li className="list-group-item">
@@ -10,4 +10,4 @@ function resultList(props) {
     </ul>
   );
 }
-export default resultList;
+export default ResultList;

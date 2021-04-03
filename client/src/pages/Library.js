@@ -1,6 +1,6 @@
 import React from "react";
 import {Card} from "react-bootstrap";
-import style from './styles';
+
 
 const gameLibrary = () => {
 const gamesList = [
@@ -12,9 +12,7 @@ const gamesList = [
 
 const renderCard = (card,index) =>{
   return(
-    <Style>
-    <Card style={{ width: '18rem' }}>
-      
+    <Card style={{ width: '18rem' }}>  
   <Card.Img variant="top" src={card.image}  />
   <Card.Body>
   <Card.Title>{card.title}</Card.Title>
@@ -23,7 +21,6 @@ const renderCard = (card,index) =>{
     </Card.Text>
   </Card.Body>
 </Card>
-</Style>
 );
 };
 return (<div classname = "App">

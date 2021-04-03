@@ -1,9 +1,15 @@
 import React from 'react';
 import {Card}from 'react-bootstrap';
 import "./style.css"
-
+const [games, setGame] = useState([]);
 function GameCard({name, background_image, id})
-{
+{ 
+  
+  function saveGame(){
+    
+    
+    console.log(id)
+  }
   
   return (
  <> 
@@ -14,7 +20,7 @@ function GameCard({name, background_image, id})
     <Card.Text style={{color: 'purple'}}>
       {id}
     </Card.Text>
-    <button id={id} style={{bgcolor: 'purple'}}>Save</button>
+    <button onClick={saveGame} style={{bgcolor: 'purple'}}>Save</button>
   </Card.Body>
 </Card>
  </>

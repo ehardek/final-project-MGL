@@ -3,18 +3,19 @@ import Button from "react-bootstrap/Button";
 import {Jumbotron, Container, InputGroup, FormControl, Row} from "react-bootstrap";
 import {searchGames} from '../utils/API';
 // import ResultList from "../components/List";
-import GameCard from "../components/GameCard/style"
+import GameCard from "../components/GameCard"
 
 
 function Search() {
-   const [search , setSearch] = useState("Rawg.io");
+   const [search , setSearch] = useState("");
   //  const [name, gameName] = useState("");
    const [list, setList] = useState([]);
    const [lib, gameLib] = useState([]);
    
    
    function submitSearch(event) {
-      console.log(search)
+      event.preventDefault();
+    console.log(search)
         searchGames(search).then(
           results=>{
             let gameArray = results.data.results
@@ -22,6 +23,9 @@ function Search() {
             console.log(list)
           }
         )
+    function saveGame(event){
+      console.log(this.id)
+    }
     }
 return(
 <>

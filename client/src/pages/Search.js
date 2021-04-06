@@ -3,18 +3,28 @@ import Button from "react-bootstrap/Button";
 import {Jumbotron, Container, InputGroup, FormControl, Row} from "react-bootstrap";
 import {searchGames} from '../utils/API';
 // import ResultList from "../components/List";
-import GameCard from "../components/GameCard/style"
+import GameCard from "../components/GameCard"
 
 
 function Search() {
-   const [search , setSearch] = useState("Rawg.io");
+   const [search , setSearch] = useState("");
   //  const [name, gameName] = useState("");
    const [list, setList] = useState([]);
-   const [lib, gameLib] = useState([]);
+   const [games, addGame] = useState([]);
    
-   
+   function saveGame(event){
+    console.log(event.target)
+    // addGame((games)=>[...games,id])
+    // console.log(id)
+    // let newGames = games
+    // newGames.push(id)
+    // addGame([...games])
+    // console.log(games)
+  }
+  
    function submitSearch(event) {
-      console.log(search)
+      event.preventDefault();
+    console.log(search)
         searchGames(search).then(
           results=>{
             let gameArray = results.data.results
@@ -48,6 +58,8 @@ return(
       name = {game.name}
       background_image = {game.background_image}
       id = {game.id}
+      onClick = {saveGame}
+      // key = {game.id}
     />
    ))):(
      <h3> What the Heck is that?</h3>

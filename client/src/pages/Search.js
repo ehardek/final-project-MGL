@@ -21,7 +21,7 @@ function Search() {
     // addGame([...games])
     // console.log(games)
   }
-
+  
    function submitSearch(event) {
       event.preventDefault();
     console.log(search)

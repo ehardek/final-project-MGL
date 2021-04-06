@@ -10,9 +10,18 @@ function Search() {
    const [search , setSearch] = useState("");
   //  const [name, gameName] = useState("");
    const [list, setList] = useState([]);
-   const [lib, gameLib] = useState([]);
+   const [games, addGame] = useState([]);
    
-   
+   function saveGame(event){
+    console.log(event.target)
+    // addGame((games)=>[...games,id])
+    // console.log(id)
+    // let newGames = games
+    // newGames.push(id)
+    // addGame([...games])
+    // console.log(games)
+  }
+
    function submitSearch(event) {
       event.preventDefault();
     console.log(search)
@@ -23,9 +32,6 @@ function Search() {
             console.log(list)
           }
         )
-    function saveGame(event){
-      console.log(this.id)
-    }
     }
 return(
 <>
@@ -52,6 +58,8 @@ return(
       name = {game.name}
       background_image = {game.background_image}
       id = {game.id}
+      onClick = {saveGame}
+      // key = {game.id}
     />
    ))):(
      <h3> What the Heck is that?</h3>

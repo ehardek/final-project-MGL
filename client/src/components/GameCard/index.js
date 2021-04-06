@@ -1,15 +1,20 @@
-import React from 'react';
+import {React, useState} from 'react';
 import {Card}from 'react-bootstrap';
 import "./style.css"
-const [games, setGame] = useState([]);
+
 function GameCard({name, background_image, id})
 { 
+  // const [games, addGame] = useState([]);
   
-  function saveGame(){
-    
-    
-    console.log(id)
-  }
+  // function saveGame(event){
+  //   console.log(event.target)
+  //   addGame((games)=>[...games,id])
+  //   console.log(id)
+  //   // let newGames = games
+  //   // newGames.push(id)
+  //   // addGame([...games])
+  //   console.log(games)
+  // }
   
   return (
  <> 
@@ -20,7 +25,7 @@ function GameCard({name, background_image, id})
     <Card.Text style={{color: 'purple'}}>
       {id}
     </Card.Text>
-    <button onClick={saveGame} style={{bgcolor: 'purple'}}>Save</button>
+    <button key={id} style={{bgcolor: 'purple'}}>Save</button>
   </Card.Body>
 </Card>
  </>
